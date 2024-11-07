@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.9 on win32)" generated="20241108 02:13:26.744" rpa="false" schemaversion="4">
+<suite id="s1" name="Assignment" source="C:\Users\peeha\Desktop\robot\1\Newassign\testcase\assignment.robot">
+<kw name="Start Browser" library="import" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241108 02:13:27.200" level="INFO">Opening browser 'chrome' to base url 'file:///c%3A/Users/peeha/Desktop/robot/1/Newassign/Url/ep01_small_excercise.html'.</msg>
+<status status="PASS" starttime="20241108 02:13:27.198" endtime="20241108 02:13:29.016"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:27.197" endtime="20241108 02:13:29.016"/>
+</kw>
+<test id="s1-t1" name="TC-input text" line="12">
+<kw name="Start Browser" library="import">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241108 02:13:29.021" level="INFO">Opening browser 'chrome' to base url 'file:///c%3A/Users/peeha/Desktop/robot/1/Newassign/Url/ep01_small_excercise.html'.</msg>
+<status status="PASS" starttime="20241108 02:13:29.019" endtime="20241108 02:13:30.765"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:29.018" endtime="20241108 02:13:30.765"/>
+</kw>
+<kw name="Login to website" library="import">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UsernameBox}</arg>
+<arg>input username</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241108 02:13:30.768" level="INFO">Typing text 'input username' into text field 'id=username-box'.</msg>
+<status status="PASS" starttime="20241108 02:13:30.767" endtime="20241108 02:13:30.918"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PasswordBox}</arg>
+<arg>input password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241108 02:13:30.919" level="INFO">Typing text 'input password' into text field '//div[@v="password"]/input'.</msg>
+<status status="PASS" starttime="20241108 02:13:30.918" endtime="20241108 02:13:31.042"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NicknameBox}</arg>
+<arg>input nickname</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241108 02:13:31.044" level="INFO">Typing text 'input nickname' into text field '//input[@doppio="nickname"]'.</msg>
+<status status="PASS" starttime="20241108 02:13:31.043" endtime="20241108 02:13:31.265"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:30.766" endtime="20241108 02:13:31.265"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:29.017" endtime="20241108 02:13:31.265"/>
+</test>
+<test id="s1-t2" name="TC-Dropdown" line="15">
+<kw name="SelectList from label" library="import">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${DropdownCompany}</arg>
+<arg>Doppio</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20241108 02:13:31.270" level="INFO">Selecting options from selection list 'company' by label Doppio.</msg>
+<status status="PASS" starttime="20241108 02:13:31.269" endtime="20241108 02:13:31.370"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.268" endtime="20241108 02:13:31.370"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.267" endtime="20241108 02:13:31.371"/>
+</test>
+<test id="s1-t3" name="TC-Checkbox" line="18">
+<kw name="SelectCheckbox from id" library="import">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${CheckBox1}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20241108 02:13:31.374" level="INFO">Selecting checkbox 'id=op1'.</msg>
+<status status="PASS" starttime="20241108 02:13:31.373" endtime="20241108 02:13:31.463"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${CheckBox1}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20241108 02:13:31.465" level="INFO">Verifying checkbox 'id=op1' is selected.</msg>
+<status status="PASS" starttime="20241108 02:13:31.464" endtime="20241108 02:13:31.502"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.373" endtime="20241108 02:13:31.503"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.372" endtime="20241108 02:13:31.503"/>
+</test>
+<test id="s1-t4" name="TC-clickbutton" line="20">
+<kw name="ClickBtn from id" library="import">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UsemeBTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241108 02:13:31.507" level="INFO">Clicking element 'id=use-me'.</msg>
+<status status="PASS" starttime="20241108 02:13:31.506" endtime="20241108 02:13:31.567"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.506" endtime="20241108 02:13:31.567"/>
+</kw>
+<status status="PASS" starttime="20241108 02:13:31.505" endtime="20241108 02:13:31.568"/>
+</test>
+<status status="PASS" starttime="20241108 02:13:26.747" endtime="20241108 02:13:31.571"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Assignment">Assignment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
