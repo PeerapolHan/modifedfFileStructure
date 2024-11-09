@@ -1,24 +1,7 @@
 *** Settings ***
-Variables    ./Variable/assign_variable.py
-Variables    ./locators/assign_locators.py
-***Keywords***
-Start Browser
-    Open Browser    ${url}      ${browser}      options=${options}
+Library     SeleniumLibrary
 
-End Browser
-    Close Browser
+Resource    ./common/common.robot
+Resource    ./locators/locators.robot
 
-Login to website
-    Input Text      ${UsernameBox}       input username
-    Input Text      ${PasswordBox}      input password
-    Input Text      ${NicknameBox}     input nickname
-
-SelectList from label
-    select from list by label       ${DropdownCompany}     Doppio  
-
-SelectCheckbox from id
-    select checkbox     ${CheckBox1}
-    checkbox should be selected     ${CheckBox1}
-
-ClickBtn from id
-    Click element       ${UsemeBTN}
+Variables   ./Variable/Variable.yaml

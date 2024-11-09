@@ -1,6 +1,6 @@
 ***Settings***
 Library     SeleniumLibrary
-Resource    ../resource/import.robot
+Resource    ${CURDIR}/../resource/import.robot
 Suite Setup    Start Browser
 # Suite Teardown    End Browser        
 
@@ -10,7 +10,6 @@ TC-input text
     Login to website
 TC-Dropdown
     SelectList from label  
-
 TC-Checkbox
     SelectCheckbox from id
 TC-clickbutton

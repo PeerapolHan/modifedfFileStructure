@@ -1,0 +1,4 @@
+url : file:///Users/peerapolhanwattanachai/Desktop/file/HW/modifedfFileStructure/Newassign/Url/ep01_small_excercise.html
+browser : chrome
+options : add_experimental_option('detach',True)
+
